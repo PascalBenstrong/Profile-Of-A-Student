@@ -1,0 +1,20 @@
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="email" id="email" class="form-control" name="email" placeholder="Student email"
+            value="<%= typeof email != 'undefined' ? email : '' %>" required autofocus autocomplete="email">
+        <label for="email">Student email</label>
+    </div>
+</div>
+
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="password" id="password" class="form-control" name="password" placeholder="Password"
+            value="<%= typeof email != 'undefined' ? password : '' %>" required autofocus
+            autocomplete="current-password">
+        <label for="password">Password</label>
+    </div>
+</div>
+
+<button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Sign
+    in</button>
+<p class="lead mt-4"> Need an account? <a href="/student/register">Register</a></p>

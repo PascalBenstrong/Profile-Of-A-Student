@@ -1,0 +1,67 @@
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="text" id="inputName" class="form-control" name="name" placeholder="Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>" required autofocus autocomplete="name">
+        <label for="inputName">Name</label>
+    </div>
+</div>
+
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="text" id="inputSurname" class="form-control" name="surname" placeholder="Surname"
+            value="<%= typeof surname != 'undefined' ? surname : '' %>" required autofocus autocomplete="family-name">
+        <label for="inputSurname">Surname</label>
+    </div>
+</div>
+
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="number" id="inputAge" class="form-control" name="age" placeholder="Age"
+            value="<%= typeof age != 'undefined' ? age : '' %>" required autofocus>
+        <label for="inputAge">Age</label>
+    </div>
+</div>
+
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="text" id="inputDegree" class="form-control" name="degree" placeholder="Degree"
+            value="<%= typeof degree != 'undefined' ? degree : '' %>" required autofocus>
+        <label for="inputDegree">Degree</label>
+    </div>
+</div>
+
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="text" id="inputFavouriteCourse" class="form-control" name="favourite_course"
+            value="<%= typeof favourite_course != 'undefined' ? favourite_course : '' %>" placeholder="Favourite
+                course" required autofocus>
+        <label for="inputFavouriteCourse">Favourite course</label>
+    </div>
+</div>
+
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Student email"
+            value="<%= typeof email != 'undefined' ? email : '' %>" required autofocus autocomplete="email">
+        <label for="inputEmail">Student email</label>
+    </div>
+</div>
+
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password"
+            value="<%= typeof email != 'undefined' ? password : '' %>" required autofocus>
+        <label for="inputPassword">Password</label>
+    </div>
+</div>
+<div class="form-label-group">
+    <div class="form-label-group">
+        <input type="password" id="inputConfirmPassword" class="form-control" name="confirm_password"
+            placeholder="Confirm Password" value="<%= typeof email != 'undefined' ? confirm_password : '' %>" required
+            autofocus>
+        <label for="inputConfirmPassword">Confirm Password</label>
+    </div>
+</div>
+
+<button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+<p class="lead mt-4"> Already have an account? <a href="/student/login">Login</a></p>

@@ -1,0 +1,31 @@
+{
+  "name": "profile_of_the_user",
+  "version": "1.0.0",
+  "description": "simple sign in system where the user can sign in edit profile and save changes",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Pascal Nsunba",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "*",
+    "express-ejs-layouts": "^2.5.0",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "nodemon": "^1.19.1",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}

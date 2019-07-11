@@ -1,0 +1,78 @@
+<p class="lead mb-3"><strong>Welcome <%= student.name %></strong></p>
+
+<div class="form-label-group">
+  <div class="form-label-group">
+    <input type="text" id="inputName" class="form-control" name="name" placeholder="Name"
+      value="<%= typeof student.name != 'undefined' ? student.name : '' %>" required autofocus>
+    <label for="inputName">Name</label>
+  </div>
+</div>
+
+<div class="form-label-group">
+  <div class="form-label-group">
+    <input type="text" id="inputSurname" class="form-control" name="surname" placeholder="Surname"
+      value="<%= typeof student.surname != 'undefined' ? student.surname : '' %>" required autofocus>
+    <label for="inputSurname">Surname</label>
+  </div>
+</div>
+
+<div class="form-label-group">
+  <div class="form-label-group">
+    <input type="number" id="inputAge" class="form-control" name="age" placeholder="Age"
+      value="<%= typeof student.age != 'undefined' ? student.age : '' %>" required autofocus>
+    <label for="inputAge">Age</label>
+  </div>
+</div>
+
+<div class="form-label-group">
+  <div class="form-label-group">
+    <input type="text" id="inputDegree" class="form-control" name="degree" placeholder="Degree"
+      value="<%= typeof student.degree != 'undefined' ? student.degree : '' %>" required autofocus>
+    <label for="inputDegree">Degree</label>
+  </div>
+</div>
+
+<div class="form-label-group">
+  <div class="form-label-group">
+    <input type="text" id="inputFavouriteCourse" class="form-control" name="favourite_course"
+      value="<%= typeof student.favouriteCourse != 'undefined' ? student.favouriteCourse : '' %>" placeholder="Favourite
+                course" required autofocus>
+    <label for="inputFavouriteCourse">Favourite course</label>
+  </div>
+</div>
+
+<div class="form-label-group">
+  <div class="form-label-group">
+    <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Student email"
+      value="<%= typeof student.email != 'undefined' ? student.email : '' %>" required autofocus autocomplete="email">
+    <label for="inputEmail">Student email</label>
+  </div>
+</div>
+
+<button id="submit" class="btn btn-lg btn-primary btn-block" type="submit" disabled>Save</button>
+
+<script>
+  (() => {
+
+    const student = {
+      name: '<%= student.name %>',
+      surname: '<%= student.surname %>',
+      age: '<%= student.age %>',
+      degree: '<%= student.degree %>',
+      favouriteCourse: '<%= student.favouriteCourse %>',
+      email: '<%= student.email %>'
+    };
+
+    var changed = false;
+
+    $('form[name="mainForm"]').on("change", (input) => {
+      if ($(input.target).prop('nodeName') === 'INPUT') {
+        let value = student[`${$(input.target).attr('name')}`];
+        changed = changed === false ? $(input.target).attr('value') === value : changed && $(input.target).attr(
+            'value') ===
+          value;
+        $('#submit').attr('disabled', !changed);
+      }
+    });
+  })();
+</script>
