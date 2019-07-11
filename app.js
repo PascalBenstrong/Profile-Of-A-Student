@@ -1,4 +1,3 @@
-
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -7,6 +6,7 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
 //  Passport Config
@@ -16,7 +16,6 @@ require('./config/passport')(passport);
 //DB Config
 
 const db = require('./config/keys').MongoURI;
-
 // Connect to Mongo
 mongoose.connect(db, {
     useNewUrlParser: true
