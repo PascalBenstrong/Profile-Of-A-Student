@@ -43,9 +43,8 @@
 
 <div class="form-label-group">
   <div class="form-label-group">
-    <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Student email"
-      value="<%= typeof student.email != 'undefined' ? student.email : '' %>" required autofocus autocomplete="email">
-    <label for="inputEmail">Student email</label>
+    <input type="email" id="inputEmail" class="form-control"
+      value="<%= typeof student.email != 'undefined' ? student.email : '' %>" readonly>
   </div>
 </div>
 

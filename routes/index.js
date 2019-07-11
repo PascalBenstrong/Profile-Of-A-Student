@@ -63,8 +63,7 @@ router.post('/student/save', ensureAuthenticated, (req, res) => {
         surname,
         age,
         degree,
-        favourite_course,
-        email
+        favourite_course
     } = req.body;
 
     const student = req.user;
@@ -74,7 +73,6 @@ router.post('/student/save', ensureAuthenticated, (req, res) => {
     student.age = parseInt(age);
     student.degree = degree;
     student.favouriteCourse = favourite_course;
-    student.email = email;
 
     student.save((err, _student) => {
         if (err) {
